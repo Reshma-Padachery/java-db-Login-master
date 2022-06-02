@@ -2,30 +2,21 @@
 
 install MySQL version 8.0.21   (ie. 8.0.x)
 
-database username: admin
-database password: welcome1
+database username: root
+database password: admin
 
 If you are using another user then needs to be changed in java file: DbUtil.java
 
-mysql> create database flipkart;
+mysql> create database tempdb;
 
-mysql> use flipkart;
+mysql> use tempdb;
 
 mysql> create table user(name varchar(100),password varchar(100), address varchar(1000), age int, profession varchar(100));
 
 mysql> select * from User;
 
-Go to server
+#Update files with the new database details
 
-1. yum install git -y 
-2. cd $HOME
-3. git clone https://github.com/mailrahulsre/java-db-Login.git
-4. cd /root/java-db-Login/src/main
-5. Update files - with DB end POINT
-  - java/com/example/DbUtil.java
-  - java/com/example/application.properties
-  - webapp/WEB-INF/web.xml
-  
-  6. git add .
-  7. git commit . -m "new db details"
-  8. git push origin master
+## - /root/java-db-Login/src/main/webapp/WEB-INF/web.xml
+## - /root/java-db-Login/src/main/java/com/example/application.properties
+## - /root/java-db-Login/src/main/java/com/example/DbUtil.java
