@@ -40,12 +40,25 @@
                                 <version>2.2</version>
                                 <configuration>
                                 <path>/${project.artifactId}##${project.version}</path>
-                                <url>http://172.31.19.199:8080/manager/text</url>
+                                <url>http://43.204.229.93:8080/manager/text</url>
                                         <username>admin</username>
                                         <password>*******</password>
                                         <update>true</update>
                                 </configuration>
                         </plugin>
+						<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+                <webResources>
+                    <resource>
+                        <directory>WebContent</directory>
+                    </resource>
+                </webResources>
+            </configuration>
+        </plugin>
+    </plugins>
                 </plugins>
 
                 <resources>
